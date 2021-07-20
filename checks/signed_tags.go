@@ -19,7 +19,7 @@ import (
 
 	"github.com/shurcooL/githubv4"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 const (

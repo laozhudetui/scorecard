@@ -21,7 +21,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 const CheckPermissions = "Token-Permissions"

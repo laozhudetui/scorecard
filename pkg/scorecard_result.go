@@ -26,7 +26,7 @@ import (
 
 	"github.com/olekukonko/tablewriter"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 type ScorecardResult struct {

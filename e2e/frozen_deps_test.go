@@ -21,9 +21,9 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/ossf/scorecard/checker"
-	"github.com/ossf/scorecard/checks"
-	"github.com/ossf/scorecard/clients/githubrepo"
+	"github.com/ossf/scorecard/v2/checker"
+	"github.com/ossf/scorecard/v2/checks"
+	"github.com/ossf/scorecard/v2/clients/githubrepo"
 )
 
 var _ = Describe("E2E TEST:FrozenDeps", func() {

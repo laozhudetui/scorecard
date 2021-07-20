@@ -20,7 +20,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 // ErrReadFile indicates the header size does not match the size of the file.

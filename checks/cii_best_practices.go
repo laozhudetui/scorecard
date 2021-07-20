@@ -20,7 +20,7 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 // CheckCIIBestPractices is the registered name for CIIBestPractices.

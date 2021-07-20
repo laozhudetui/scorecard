@@ -21,7 +21,7 @@ import (
 	"github.com/h2non/filetype"
 	"github.com/h2non/filetype/types"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 //nolint

@@ -23,7 +23,7 @@ import (
 	"github.com/moby/buildkit/frontend/dockerfile/parser"
 	"gopkg.in/yaml.v2"
 
-	"github.com/ossf/scorecard/checker"
+	"github.com/ossf/scorecard/v2/checker"
 )
 
 // CheckFrozenDeps is the registered name for FrozenDeps.
