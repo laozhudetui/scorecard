@@ -22,7 +22,11 @@ import (
 // for the occurrence.
 func CheckIfFileExists(checkName string, c *checker.CheckRequest, onFile func(name string,
 	Logf func(s string, f ...interface{})) (bool, error)) checker.CheckResult {
-	for _, filename := range c.RepoClient.ListFiles(func(string) bool { return true }) {
+	matchedFiles, err := c.RepoClient.ListFiles(func(string) (bool, error) { return true, nil })
+	if err != nil {
+		return checker.CreateRuntimeErrorResult(checkName, err)
+	}
+	for _, filename := range matchedFiles {
 		rr, err := onFile(filename, c.Logf)
 		if err != nil {
 			return checker.CheckResult{
@@ -47,7 +51,12 @@ func CheckIfFileExists(checkName string, c *checker.CheckRequest, onFile func(na
 
 func CheckIfFileExists2(checkName string, c *checker.CheckRequest, onFile func(name string,
 	dl checker.DetailLogger) (bool, error)) (bool, error) {
-	for _, filename := range c.RepoClient.ListFiles(func(string) bool { return true }) {
+	matchedFiles, err := c.RepoClient.ListFiles(func(string) (bool, error) { return true, nil })
+	if err != nil {
+		// nolint: wrapcheck
+		return false, err
+	}
+	for _, filename := range matchedFiles {
 		rr, err := onFile(filename, c.Dlogger)
 		if err != nil {
 			return false, err
